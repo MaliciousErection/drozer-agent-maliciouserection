@@ -69,12 +69,5 @@ Slightly modified the project:
 ** This is disabled for now; if you want to enable it, uncomment the following line in `com.mwr.dz.activities.MainActivity`:
 
 ```
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        
-        Agent.getInstance().setContext(this.getApplicationContext());
-        
-        setContentView(R.layout.activity_main);
-		//checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
+//checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
 ```
