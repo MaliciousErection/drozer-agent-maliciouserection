@@ -1,0 +1,17 @@
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.1'
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.8'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}

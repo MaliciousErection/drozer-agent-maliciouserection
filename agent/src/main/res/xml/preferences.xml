@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <PreferenceCategory
+        android:title="@string/agent"
+        android:key="agent_settings">
+         <EditTextPreference 
+            android:key="agent:uid"
+            android:title="@string/custom_uid"
+            android:summary="@string/custom_uid_summary"
+            android:defaultValue=""/>
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="@string/embedded_server"
+        android:key="server_settings">
+	    <EditTextPreference
+	        android:key="server:port"
+	        android:title="@string/embedded_server_port"
+	        android:summary="@string/embedded_server_port_summary"
+	        android:defaultValue="31415"
+	        android:numeric="integer" />
+	    <EditTextPreference
+	        android:key="server:password"
+	        android:title="@string/embedded_server_password"
+	        android:summary="@string/embedded_server_password_summary"
+	        android:defaultValue="" />
+	    <CheckBoxPreference
+	        android:key="server:ssl"
+	        android:title="@string/ssl_enable"
+	        android:summary="@string/ssl_enable_description"
+	        android:disableDependentsState="false" />
+	    <EditTextPreference
+	        android:key="server:ks:path"
+	        android:dependency="server:ssl"
+	        android:defaultValue="/data/data/com.mwr.dz/files/agent.bks"
+	        android:title="@string/ssl_keystore_path"
+	        android:summary="@string/ssl_keystore_path_description" />
+	    <EditTextPreference
+	        android:key="ssl:ks:password"
+	        android:dependency="server:ssl"
+	        android:defaultValue="drozer"
+	        android:title="@string/ssl_keystore_password"
+	        android:summary="@string/ssl_keystore_password_description" />
+	    <EditTextPreference
+	        android:key="server:key:password"
+	        android:dependency="server:ssl"
+	        android:defaultValue="drozer"
+	        android:title="@string/ssl_key_password"
+	        android:summary="@string/ssl_key_password_description" />
+	</PreferenceCategory>
+	<PreferenceCategory
+	    android:title="@string/endpoint_settings"
+	    android:key="endpoint_settings">
+	</PreferenceCategory>
+	<PreferenceCategory
+	    android:title="@string/system_settings"
+	    android:key="system_settings">
+	    <Preference
+	        android:key="about_drozer"
+	        android:title="@string/title_about"
+	        android:summary="@string/about_summary" />
+	    <CheckBoxPreference android:key="restore_after_crash"
+			android:title="@string/restore_after_crash"
+			android:summary="@string/restore_summary"
+			android:defaultValue="true"/>
+	</PreferenceCategory>
+    
+</PreferenceScreen>

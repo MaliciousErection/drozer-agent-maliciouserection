@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- drozer -->
+    <string name="app_name">drozer Agent</string>
+    
+    <!-- General -->
+    <string name="calculating">Calculating. Please wait&#8230;</string>
+    <string name="cancel">Cancel</string>
+    <string name="connected">Connected</string>
+    <string name="disabled">Disabled</string>
+    <string name="edit">Edit</string>
+    <string name="enabled">Enabled</string>
+    <string name="menu_settings">Settings</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="refresh">Refresh</string>
+    <string name="save">Save</string>
+    <string name="service_offline">The required service seems to be offline.</string>
+    <string name="system_settings">System</string>
+    <string name="yes">Yes</string>
+    
+    <!-- Agent -->
+    <string name="agent">Agent</string>
+    <string name="custom_uid">Device ID</string>
+    <string name="custom_uid_summary">Override the Device ID reported in the drozer console, when connecting to this agent.</string>
+       
+    <!-- Embedded Server -->
+    <string name="embedded_server">Embedded Server</string>
+    <string name="embedded_server_details">Server Details</string>
+    <string name="embdded_server_messages">Messages</string>
+    <string name="embedded_server_password">Password</string>
+    <string name="embedded_server_password_protected">Password Protected</string>
+    <string name="embedded_server_password_summary">Set a password, required to establish a session with this agent.</string>
+    <string name="embedded_server_port">Port</string>
+    <string name="embedded_server_port_summary">Specify the port that the embedded server will listen on.</string>
+    <string name="embedded_server_started">Started embedded server on port %d.</string>
+    <string name="embedded_server_stopped">Stopped embedded server, that was listening on port %d.</string>
+    
+    <!-- Endpoint -->
+    <string name="endpoint_connection_string">hostname:port</string>
+    <string name="endpoint_create_error">There was an error creating that Endpoint.</string>
+    <string name="endpoint_created">Successfully created Endpoint.</string>
+    <string name="endpoint_details">Endpoint Details</string>
+    <string name="endpoint_edit">Edit Endpoint</string>
+    <string name="endpoint_forget">Forget Endpoint</string>
+    <string name="endpoint_host">Host</string>
+    <string name="endpoint_messages">Messages</string>
+    <string name="endpoint_name">Endpoint</string>
+    <string name="endpoint_new">New Endpoint</string>
+    <string name="endpoint_offline_no_fingerprint">This endpoint is not connected, so not SSL fingerprint can be determined.</string>
+    <string name="endpoint_password">Password</string>
+    <string name="endpoint_password_description">Set a password, required to establish a session with this agent.</string>
+    <string name="endpoint_password_protected">Password Protected</string>
+    <string name="endpoint_port">Port</string>
+    <string name="endpoint_removed">That Endpoint was successfully deleted.</string>
+    <string name="endpoint_settings">Endpoint Settings</string>
+    <string name="endpoint_ssl_truststore_password">Trust Store Password</string>
+    <string name="endpoint_ssl_truststore_password_description">Specify the password for the Keystore containing the CA certificates.</string>
+    <string name="endpoint_ssl_truststore_path">Trust Store Path</string>
+    <string name="endpoint_ssl_truststore_path_description">Specify the path to the Keystore containing the CA certificates.</string>
+    <string name="endpoint_started">Opened connection to %s.</string>
+    <string name="endpoint_stopped">Closed connection to %s.</string>
+    <string name="endpoint_update_error">There was an error updating that Endpoint.</string>
+    <string name="endpoint_updated">Successfully updated the Endpoint.</string>
+    
+    <!-- Logging -->
+    <string name="log_tag_agent">Agent</string>
+    <string name="log_tag_client_service">ClientService</string>
+    <string name="log_tag_main_activity">Main</string>
+    <string name="log_tag_server_service">ServerService</string>
+    <string name="log_tag_session_service">SessionService</string>
+    
+    <string name="log_level_tag_assert">A</string>
+    <string name="log_level_tag_debug">D</string>
+    <string name="log_level_tag_error">E</string>
+    <string name="log_level_tag_info">I</string>
+    <string name="log_level_tag_unknown">U</string>
+    <string name="log_level_tag_verbose">V</string>
+    <string name="log_level_tag_warn">W</string>
+    
+    <!-- Sessions -->
+    <string name="session_active">Active Sessions</string>
+    <string name="session_connected">A user is accessing your device using drozer.</string>
+    <string name="session_status_placeholder">Status Message goes Here</string>
+    
+    <!-- SSL -->
+    <string name="ssl_enable">Enable SSL</string>
+    <string name="ssl_enable_description">Encrypt connections to your device, using SSL.</string>
+    <string name="ssl_enabled">SSL Enabled</string>
+    <string name="ssl_disabled">SSL Disabled</string>
+    <string name="ssl_fingerprint">SSL Fingerprint</string>
+    <string name="ssl_fingerprint_error">There was an error determining the SSL fingerprint.</string>
+    <string name="ssl_key_password">Key Password</string>
+    <string name="ssl_key_password_description">Specify the password for the SSL key.</string>
+    <string name="ssl_keystore_password">Keystore Password</string>
+    <string name="ssl_keystore_password_description">Specify the password for the Keystore containing the SSL keys.</string>
+    <string name="ssl_keystore_path">Keystore Path</string>
+    <string name="ssl_keystore_path_description">Specify the path to the Keystore containing the SSL keys.</string>
+    <string name="ssl_no_fingerprint">No fingerprint was calculated.</string>
+    <string name="ssl_show_fingerprint">Show Fingerprint</string>
+    <string name="ssl_status_placeholder">SSL Status</string>
+
+    <!-- .AboutActivity -->
+    <string name="title_about">About drozer</string>
+    <string name="about_contributors">Contributors</string>
+    <string name="about_copyright">Copyright © 2013 MWR InfoSecurity.</string>
+    <string name="about_description">drozer Agent v%s</string>
+    <string name="about_license">drozer Agent is released under a 3-clause BSD license.</string>
+    <string name="about_summary"></string>
+    
+    <!-- .EndpointActivity -->
+    <string name="title_activity_endpoint">drozer Endpoint</string>
+    
+    <!-- .MainActivity -->
+    <string name="title_activity_main">drozer Agent</string>
+    
+    <!-- .ServerActivity -->
+    <string name="title_activity_server">drozer Server</string>
+    
+    <!-- .SettingsActivity -->
+    <string name="title_activity_settings">drozer Settings</string>
+    <string name="restore_after_crash">Restore after crash</string>
+    <string name="restore_summary">Restore state after an unexpected shutdown</string>
+    
+</resources>
