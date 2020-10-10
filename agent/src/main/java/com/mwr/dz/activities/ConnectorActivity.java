@@ -1,11 +1,5 @@
 package com.mwr.dz.activities;
 
-import java.lang.ref.WeakReference;
-
-import com.mwr.dz.Agent;
-import com.mwr.dz.R;
-import com.mwr.jdiesel.api.connectors.Connector;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -16,6 +10,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.mwr.dz.Agent;
+import com.mwr.dz.R;
+import com.mwr.jdiesel.api.connectors.Connector;
+
+import java.lang.ref.WeakReference;
 
 public abstract class ConnectorActivity extends Activity {
     
@@ -98,6 +98,7 @@ public abstract class ConnectorActivity extends Activity {
     	super.onResume();
     	
     	Agent.getInstance().bindServices();
+
     }
 	
     public abstract void receiveFingerprint(String fingerprint); 

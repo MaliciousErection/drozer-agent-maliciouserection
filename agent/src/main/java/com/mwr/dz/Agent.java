@@ -1,12 +1,5 @@
 package com.mwr.dz;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.math.BigInteger;
-import java.security.SecureRandom;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -14,7 +7,6 @@ import android.os.Messenger;
 import android.provider.Settings;
 import android.util.Log;
 
-import com.mwr.dz.R;
 import com.mwr.dz.models.EndpointManager;
 import com.mwr.dz.models.ServerSettings;
 import com.mwr.dz.service_connectors.ClientServiceConnection;
@@ -24,6 +16,13 @@ import com.mwr.dz.services.ClientService;
 import com.mwr.dz.services.ServerService;
 import com.mwr.jdiesel.api.DeviceInfo;
 import com.mwr.jdiesel.api.connectors.Server;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.math.BigInteger;
+import java.security.SecureRandom;
 
 public class Agent {
 	
@@ -73,6 +72,7 @@ public class Agent {
 	public void bindServices() {
 		ClientService.startAndBindToService(this.context, this.getClientService());
 		ServerService.startAndBindToService(this.context, this.getServerService());
+
 	}
 
 	public void createDefaultKeyMaterial() {

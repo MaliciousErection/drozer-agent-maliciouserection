@@ -1,18 +1,18 @@
 package com.mwr.jdiesel.api.connectors;
 
+import android.os.Bundle;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.KeyStore;
-import java.security.cert.CertificateException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.UnrecoverableKeyException;
+import java.security.cert.CertificateException;
 
 import javax.net.ssl.KeyManager;
 import javax.net.ssl.KeyManagerFactory;
-
-import android.os.Bundle;
 
 public class Server extends Connector {
 	

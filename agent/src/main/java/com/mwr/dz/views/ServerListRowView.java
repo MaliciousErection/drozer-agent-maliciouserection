@@ -1,13 +1,10 @@
 package com.mwr.dz.views;
 
-import java.util.Observable;
-import java.util.Observer;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -15,6 +12,9 @@ import android.widget.ToggleButton;
 import com.mwr.dz.R;
 import com.mwr.jdiesel.api.connectors.Server;
 import com.mwr.jdiesel.api.connectors.Server.OnChangeListener;
+
+import java.util.Observable;
+import java.util.Observer;
 
 public class ServerListRowView extends LinearLayout implements Observer, OnCheckedChangeListener {
 	
@@ -35,7 +35,7 @@ public class ServerListRowView extends LinearLayout implements Observer, OnCheck
 	
 	public ServerListRowView(Context context) {
 		super(context);
-		
+
 		this.initView();
 	}
 
@@ -55,6 +55,7 @@ public class ServerListRowView extends LinearLayout implements Observer, OnCheck
 		this.adb_server_toggle_button = (ToggleButton)this.findViewById(R.id.adb_server_toggle);
 		
 		this.adb_server_toggle_button.setOnCheckedChangeListener(this);
+
 	}
 	
 	@Override

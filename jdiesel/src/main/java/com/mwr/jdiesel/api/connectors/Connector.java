@@ -1,8 +1,8 @@
 package com.mwr.jdiesel.api.connectors;
 
-import java.util.Observable;
-
 import com.mwr.jdiesel.logger.Logger;
+
+import java.util.Observable;
 
 public abstract class Connector extends Observable {
 	
