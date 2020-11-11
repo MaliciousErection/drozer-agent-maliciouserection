@@ -35,7 +35,7 @@ android {
 }
 
 dependencies {
-    compile project(':mwrtls')
+    implementation project(':mwrtls')
     compile files('lib/protobuf-java-2.6.1.jar')
 }
 
