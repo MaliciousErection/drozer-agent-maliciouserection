@@ -1,3 +1,18 @@
+
+KEN UPDATE
+----------------------
+Slightly modified the project:
+
+* Updated the target build API to 28
+* Added custom icons to look unique
+* Added EXTERNAL_STORAGE permissions in the application's manifest
+* Added a method to automatically ask the user for external storage permissions
+    - This is disabled for now; if you want to enable it, uncomment the following line in `com.mwr.dz.activities.MainActivity`:
+
+```
+//checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
+```
+
 drozer
 ======
 
@@ -58,16 +73,3 @@ Bug reports, feature requests, comments and questions can be submitted sent to:
 Follow the latest drozer news, follow the project on Twitter:
 
   @mwrdrozer
-
-KEN UPDATE
-----------------------
-Slightly modified the project:
-
-* Updated the target build API to 28
-* Added EXTERNAL_STORAGE permissions in the application's manifest
-* Added a method to automatically ask the user for external storage permissions
-** This is disabled for now; if you want to enable it, uncomment the following line in `com.mwr.dz.activities.MainActivity`:
-
-```
-//checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
-```
