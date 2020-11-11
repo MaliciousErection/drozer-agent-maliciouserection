@@ -5,6 +5,7 @@ Slightly modified the project:
 
 * Updated the target build API to 28
 * Added custom icons to look unique
+* Server starts automatically when you open the app
 * Added EXTERNAL_STORAGE permissions in the application's manifest
 * Added a method to automatically ask the user for external storage permissions
     - This is disabled for now; if you want to enable it, uncomment the following line in `com.mwr.dz.activities.MainActivity`:
