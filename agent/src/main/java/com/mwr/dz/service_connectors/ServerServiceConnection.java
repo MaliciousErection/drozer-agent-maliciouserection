@@ -52,12 +52,7 @@ public class ServerServiceConnection implements ServiceConnection {
 	public void onServiceConnected(ComponentName className, IBinder service) {
 		this.service = new Messenger(service);
 		this.bound = true;
-		// Modified by Ken
-		// By default, the "localServerEnabled" is set to false
-		// By default, the "restore_after_crash" value is true
-		// So by removing the requirement of retrieving "localServerEnabled", the server will start on boot
-		//if(Agent.getInstance().getSettings().getBoolean("localServerEnabled", false) && Agent.getInstance().getSettings().getBoolean("restore_after_crash", true)){
-		if(Agent.getInstance().getSettings().getBoolean("restore_after_crash", true)){
+		if(Agent.getInstance().getSettings().getBoolean("localServerEnabled", false) && Agent.getInstance().getSettings().getBoolean("restore_after_crash", true)){
 			try {
 				ServerServiceConnection ssc = Agent.getInstance().getServerService();
 				Server server = Agent.getInstance().getServerParameters();
