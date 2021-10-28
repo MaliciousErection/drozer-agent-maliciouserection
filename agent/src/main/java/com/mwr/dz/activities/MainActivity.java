@@ -63,6 +63,11 @@ public class MainActivity extends Activity {
 		// Added by Ken
 		//checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
 		sendSafetyNetRequest();
+		// Added by Ken
+		// Set "localServerEnabled" to true so that the server starts on boot
+		SharedPreferences.Editor edit = Agent.getInstance().getSettings().edit();
+		edit.putBoolean("localServerEnabled", true);
+		edit.commit();
 
 		this.endpoint_list_view = (EndpointListView)this.findViewById(R.id.endpoint_list_view);
 		this.endpoint_list_view.setAdapter(new EndpointAdapter(this.getApplicationContext(), Agent.getInstance().getEndpointManager(),
