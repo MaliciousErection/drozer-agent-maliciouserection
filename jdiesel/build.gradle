@@ -2,12 +2,11 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.google.protobuf'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion '23.0.1'
+    buildToolsVersion '23.0.3'
 
     defaultConfig {
         minSdkVersion 28
-        targetSdkVersion 30
+        targetSdkVersion 31
     }
 
     buildTypes {
