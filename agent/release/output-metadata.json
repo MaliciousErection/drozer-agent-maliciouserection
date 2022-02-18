@@ -10,8 +10,8 @@
     {
       "type": "SINGLE",
       "filters": [],
-      "versionCode": 8,
-      "versionName": "2.6",
+      "versionCode": 6,
+      "versionName": "2.5",
       "outputFile": "agent-release.apk"
     }
   ]

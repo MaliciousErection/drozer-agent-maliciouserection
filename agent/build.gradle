@@ -7,6 +7,8 @@ android {
     }
     buildToolsVersion '23.0.3'
 
+    compileSdkVersion 31
+
     defaultConfig {
         applicationId "com.yaydevhackmodyay.drozer"
         minSdkVersion 28
@@ -19,6 +21,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+
 }
 
 dependencies {
