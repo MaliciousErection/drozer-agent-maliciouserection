@@ -1,40 +1,47 @@
 package com.mwr.dz.helpers;
 
 import android.app.Activity;
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.util.Log;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class IntentProxyToContentProvider extends Activity {
 
+    String filename = "yayoutputyay";
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         Uri uri = Uri.parse(getIntent().getDataString());
+        if (getIntent().getStringExtra("filename") != null) {
+            filename = getIntent().getStringExtra("filename");
+        }
         try {
-            Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(uri));
-            Log.d("yaytagyay", String.valueOf(bitmap.getByteCount()));
-            String yayuriyay = MediaStore.Images.Media.insertImage(getContentResolver(),
-                    bitmap,
-                    "yaytitleyay",
-                    "yaydescriptionyay");
-
-            String File_Name = "yayuriyay.txt";
-            FileOutputStream fileobj = openFileOutput(File_Name, Context.MODE_PRIVATE);
-            String targetUri = yayuriyay + "\n";
-            byte[] ByteArray = targetUri.getBytes();
-            fileobj.write(ByteArray);
-            fileobj.close();
-
-            Log.d("yaytagyay", "Result: " + yayuriyay);
+            InputStream input = getContentResolver().openInputStream(uri);
+            File file = new File(getFilesDir(), filename);
+            FileOutputStream output = new FileOutputStream(file);
+            try {
+                byte[] buf = new byte[1024];
+                int len;
+                while ((len = input.read(buf)) > 0) {
+                    output.write(buf, 0, len);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (input != null)
+                        input.close();
+                    if (output != null)
+                        output.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
