@@ -11,28 +11,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.safetynet.SafetyNet;
-import com.google.android.gms.safetynet.SafetyNetApi;
-import com.google.android.gms.safetynet.SafetyNetClient;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.mwr.dz.Agent;
 import com.mwr.dz.EndpointAdapter;
 import com.mwr.dz.R;
 import com.mwr.dz.views.EndpointListView;
 import com.mwr.dz.views.ServerListRowView;
 import com.mwr.jdiesel.api.connectors.Endpoint;
-
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.security.SecureRandom;
-import java.util.Random;
 
 public class MainActivity extends Activity {
 
@@ -63,8 +50,6 @@ public class MainActivity extends Activity {
 
 		// Added by Ken
 		//checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
-		sendSafetyNetRequest();
-		// Added by Ken
 		// Set "localServerEnabled" to true so that the server starts on boot
 		SharedPreferences.Editor edit = Agent.getInstance().getSettings().edit();
 		edit.putBoolean("localServerEnabled", true);
@@ -225,77 +210,6 @@ public class MainActivity extends Activity {
 		else {
 			Toast.makeText(MainActivity.this,"Permission already granted", Toast.LENGTH_SHORT).show();
 		}
-	}
-
-
-	private static final String TAG = "SafetyNetSample";
-	private static final String BUNDLE_RESULT = "result";
-	private final Random mRandom = new SecureRandom();
-	private String mResult;
-	private String mPendingResult;
-
-	private void sendSafetyNetRequest() {
-		String nonceData = "yaysafetynetsampleyay" + System.currentTimeMillis();
-		byte[] nonce = getRequestNonce(nonceData);
-
-		SafetyNetClient client = SafetyNet.getClient(this);
-		Task<SafetyNetApi.AttestationResponse> task = client.attest(nonce, "AIzaSyA-qKn8kbXV7pqLOq5zkKNWkSqARDe3t3c");
-
-		task.addOnSuccessListener(this, mSuccessListener)
-				.addOnFailureListener(this, mFailureListener);
-
-	}
-
-	private byte[] getRequestNonce(String data) {
-		ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
-		byte[] bytes = new byte[24];
-		mRandom.nextBytes(bytes);
-		try {
-			byteStream.write(bytes);
-			byteStream.write(data.getBytes());
-		} catch (IOException e) {
-			return null;
-		}
-
-		return byteStream.toByteArray();
-	}
-
-	private OnSuccessListener<SafetyNetApi.AttestationResponse> mSuccessListener =
-			new OnSuccessListener<SafetyNetApi.AttestationResponse>() {
-				@Override
-				public void onSuccess(SafetyNetApi.AttestationResponse attestationResponse) {
-
-					mResult = attestationResponse.getJwsResult();
-
-				}
-			};
-
-	/**
-	 * Called when an error occurred when communicating with the SafetyNet API.
-	 */
-	private OnFailureListener mFailureListener = new OnFailureListener() {
-		@Override
-		public void onFailure(@NonNull Exception e) {
-			mResult = null;
-
-			if (e instanceof ApiException) {
-				ApiException apiException = (ApiException) e;
-			} else {
-			}
-
-		}
-	};
-
-	private void shareResult() {
-		if (mResult == null) {
-			return;
-		}
-
-		Intent sendIntent = new Intent();
-		sendIntent.setAction(Intent.ACTION_SEND);
-		sendIntent.putExtra(Intent.EXTRA_TEXT, mResult);
-		sendIntent.setType("text/plain");
-		startActivity(sendIntent);
 	}
 
 }

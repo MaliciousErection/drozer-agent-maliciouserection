@@ -6,8 +6,8 @@ android {
         abortOnError false
     }
     buildToolsVersion '23.0.3'
+    compileSdk 33
 
-    compileSdkVersion 31
 
     defaultConfig {
         applicationId "com.yaydevhackmodyay.drozer"
@@ -25,7 +25,6 @@ android {
 }
 
 dependencies {
-    implementation 'com.google.android.gms:play-services-safetynet:18.0.1'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
@@ -33,4 +32,5 @@ dependencies {
     implementation project(':jdiesel')
     implementation project(':mwrtls')
     implementation project(':mwrandroid')
+    implementation 'com.google.android.play:integrity:1.0.2'
 }
