@@ -3,7 +3,7 @@ KEN UPDATE
 ----------------------
 Slightly modified the project:
 
-* Updated the target build API to 28
+* Updated the target build API to 33
 * Added custom icons to look unique
 * Server starts automatically when you open the app
 * Added EXTERNAL_STORAGE permissions in the application's manifest
