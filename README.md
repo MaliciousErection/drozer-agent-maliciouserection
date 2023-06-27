@@ -1,5 +1,4 @@
-
-KEN UPDATE
+MALICIOUS ERECTION UPDATE
 ----------------------
 Slightly modified the project:
 
