@@ -13,6 +13,13 @@ Slightly modified the project:
 //checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
 ```
 
+If you want to run this version of Drozer, we highly recommend you use the `drozer-docker` image created by @Yogehi.
+
+* Docker image can be found here: https://hub.docker.com/r/yogehi/drozer_docker
+* Source code for the Docker image can be found here: https://github.com/Yogehi/Drozer-Docker
+
+BELOW IS THE ORIGINAL README PROVIDED BY MWR INFOSECURITY / THE ORIGINAL AUTHORS OF DROZER
+
 drozer
 ======
 
