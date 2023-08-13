@@ -3,12 +3,12 @@ apply plugin: 'com.google.protobuf'
 
 android {
     buildToolsVersion '23.0.3'
+    compileSdk 33
 
-    compileSdkVersion 31
 
     defaultConfig {
         minSdkVersion 28
-        targetSdkVersion 31
+        targetSdk 29
     }
 
     buildTypes {
