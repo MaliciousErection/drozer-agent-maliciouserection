@@ -13,7 +13,6 @@ public class StartMainActivityReceiver extends BroadcastReceiver {
         Intent yayintentyay = new Intent("android.intent.action.MAIN");
         ComponentName yaycnyay = new ComponentName(context.getPackageName(), "com.WithSecure.dz.activities.MainActivity");
         yayintentyay.setComponent(yaycnyay);
-        //268435456
         yayintentyay.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         try {
             context.startActivity(yayintentyay);
