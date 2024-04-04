@@ -1,36 +1,51 @@
 apply plugin: 'com.android.application'
 
 android {
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-    }
-    buildToolsVersion '23.0.3'
-    compileSdk 33
-
+    namespace 'com.WithSecure.dz'
+    compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.yaydevhackmodyay.drozer"
-        minSdk 28
-        targetSdk 29
+        applicationId 'com.yaydevhackmodyay.drozer'
+        minSdkVersion 17
+        targetSdkVersion 33
+        multiDexEnabled true
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            jniDebuggable true
+        }
+        debug {
+            debuggable true
+            jniDebuggable true
+            minifyEnabled false
         }
     }
 
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+
+        }
+    }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.android.support:multidex:2.0.1'
+    implementation 'com.google.android.gms:play-services-safetynet:18.0.1'
+    implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    implementation project(':jdiesel')
-    implementation project(':mwrtls')
-    implementation project(':mwrandroid')
-    implementation 'com.google.android.play:integrity:1.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    implementation project(':jsolar')
+    implementation project(':tlslib')
+    implementation project(':androidlib')
 }

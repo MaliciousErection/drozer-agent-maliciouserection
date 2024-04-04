@@ -1,0 +1,1 @@
+C:\Users\kgannon\Desktop\git\drozer-agent-maliciouserection\jsolar\build\intermediates\cxx\Debug\533m1v43\obj\arm64-v8a
