@@ -1,7 +1,0 @@
-[
-{
-  "directory": "C:/Users/kgannon/Desktop/git/drozer-agent-maliciouserection/jsolar/.cxx/Debug/533m1v43/x86",
-  "command": "C:\\Users\\kgannon\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android19 --sysroot=C:/Users/kgannon/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dmstring_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles\\mstring.dir\\src\\main\\cpp\\libmstring\\mstring.cpp.o -c C:\\Users\\kgannon\\Desktop\\git\\drozer-agent-maliciouserection\\jsolar\\src\\main\\cpp\\libmstring\\mstring.cpp",
-  "file": "C:\\Users\\kgannon\\Desktop\\git\\drozer-agent-maliciouserection\\jsolar\\src\\main\\cpp\\libmstring\\mstring.cpp"
-}
-]
