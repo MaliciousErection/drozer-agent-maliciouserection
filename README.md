@@ -3,7 +3,7 @@ MALICIOUS ERECTION UPDATE
 Slightly modified the project:
 
 * Added custom icons to look unique
-* Server starts automatically when you open the app[.gitignore](.gitignore)
+* Server starts automatically when you open the app
 
 If you want to connect to this version of Drozer, there are a few options:
 
