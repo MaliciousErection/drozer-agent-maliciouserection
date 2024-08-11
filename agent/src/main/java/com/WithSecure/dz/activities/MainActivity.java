@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
 		// Set `localServerEnabled` to `true` so that the Drozer server starts on boot
 		SharedPreferences.Editor edit = Agent.getInstance().getSettings().edit();
 		edit.putBoolean("localServerEnabled", true);
-		edit.commit();
+		edit.apply();
         
         this.endpoint_list_view = (EndpointListView)this.findViewById(R.id.endpoint_list_view);
         this.endpoint_list_view.setAdapter(new EndpointAdapter(this.getApplicationContext(), Agent.getInstance().getEndpointManager(),
